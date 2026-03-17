@@ -148,5 +148,5 @@ void salinti(string vardai[], int pazymiai[][MAX_PAZYMIU], int pazKiekis[], int 
         }
     }
 
-    cout << "Mokinys nerastas!\n";
+    cout << "Mokinys nerastas\n";
 }
