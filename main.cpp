@@ -87,13 +87,14 @@ int main() {
 
                 for(int i = 0; i < mokKiekis; i++) {
                     if(vardai[i] == vardas) {
+
                         int nr;
-                        cout << "Kurio pazymio nr (nuo 0): ";
+                        cout << "Kurio pazymio nr (nuo 1): ";
                         cin >> nr;
 
-                        if(nr >= 0 && nr < pazKiekis[i]) {
+                        if(nr >= 0 && nr -1 < pazKiekis[i]) {
                             cout << "Naujas pazymys: ";
-                            cin >> pazymiai[i][nr];
+                            cin >> pazymiai[i][nr -1 ]; 
                         } else {
                             cout << "Blogas numeris!\n";
                         }
@@ -115,7 +116,6 @@ int main() {
                         for(int j = i; j < mokKiekis - 1; j++) {
                             vardai[j] = vardai[j + 1];
                             pazKiekis[j] = pazKiekis[j + 1];
-
                             for(int k = 0; k < MAX_PAZYMIU; k++) {
                                 pazymiai[j][k] = pazymiai[j + 1][k];
                             }
